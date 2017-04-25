@@ -9,6 +9,8 @@ def square(x):
       p=(a+b+c)/2
       S=(p*(p-a)*(p-b)*(p-c))**0.5
       return round(S,2)
+    else:
+      return 0
 result.append(square(x))
 while input('Do you want to enter 3 more digits? ') in ['Yes', 'yes', 'Y', 'y']:
     y=input('Enter 3 more digits ')
