@@ -10,6 +10,7 @@ def square(x):
       S=(p*(p-a)*(p-b)*(p-c))**0.5
       return round(S,2)
     else:
+      print('Triangle with such sides does not exist')
       return 0
 result.append(square(x))
 while input('Do you want to enter 3 more digits? ') in ['Yes', 'yes', 'Y', 'y']:
