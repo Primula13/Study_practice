@@ -24,7 +24,9 @@ if triangle_exist(triangle)==False:
   print ('Such triangle does not exist. Try other digits')
 else:
   result.append(triangle_square(triangle))
-while question()=='y':
+while question()!='n':
+  if question()!='y':
+    continue
   triangle=input('Enter 3 more digits ')
   if triangle_exist(triangle)==False:
     print ('Such triangle does not exist. Try other digits')
