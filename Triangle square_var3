@@ -1,0 +1,40 @@
+def triangle_square(triangle):
+  sides=triangle.split(',')
+  a=int(sides[0])
+  b=int(sides[1])
+  c=int(sides[2])
+  p=(a+b+c)/2
+  Square=(p*(p-a)*(p-b)*(p-c))**0.5
+  return round(Square,2)
+def triangle_exist(triangle):
+  sides=triangle.split(',')
+  a=int(sides[0])
+  b=int(sides[1])
+  c=int(sides[2])
+  if a+b>c and a+c>b and b+c>a:
+    return True
+  else:
+    return False
+def question():
+  answer=input('Do you want to enter 3 more digits? ')
+  return answer[0].lower()
+Square_list=[]
+triangle=input('Enter 3 digits ')
+if triangle_exist(triangle)==False:
+  print ('Such triangle does not exist.')
+else:
+  Square_list.append(triangle_square(triangle))
+while True:
+  result=question()
+  if result=='y':
+    triangle=input('Enter 3 more digits ')
+    if triangle_exist(triangle)==False:
+      print ('Such triangle does not exist.')
+    else:
+      Square_list.append(triangle_square(triangle))
+  elif result!='y' and result!='n':
+    print('Invalid entry')
+  if result=='n':
+    Square_list.sort(reverse=True)
+    print (str(Square_list))
+    break
