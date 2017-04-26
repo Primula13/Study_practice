@@ -1,3 +1,4 @@
+# method where question() result is defined through string value 
 def triangle_square(triangle):
   sides=triangle.split(',')
   a=int(sides[0])
