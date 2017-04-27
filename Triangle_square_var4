@@ -40,7 +40,7 @@ while True:
       Square_list.append(triangle_square(triangle))
   elif result is None:
     print('Invalid entry')
-  if result==False:
+  elif result==False:
     Square_list.sort(reverse=True)
     print (str(Square_list))
     break
